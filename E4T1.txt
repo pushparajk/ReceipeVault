@@ -1,0 +1,10 @@
+
+
+# Identify 2-3 changes that can be made to our environment to prevent an ssh brute force attack from the internet.
+    1. Disable SSH password login on the application server instance.
+    2. Don't allow SSH into our instance. 
+    3. Allow only the HTTP traffic from loadbalancer IP
+
+# Neither instance should have had access to the secret recipes bucket, in the even that instance API credentials were compromised how could we have prevented access to sensitive data.
+    1. Add the Bucket policy in such a way that the specific IAM user has access to secret bucket
+    2. Store the files in encrypted format using the customer supplied master key. Only the user should have access to those keys.

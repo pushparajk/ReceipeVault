@@ -1,0 +1,9 @@
+Additional hardening suggestions
+--------------------------------
+1. S3 Block Public Access setting should be enabled at the bucket-level
+2. Security groups should only allow unrestricted incoming traffic for authorized ports
+3. EC2 instances should not have a public IPv4 address
+4. EC2 subnets should not automatically assign public IP addresses
+5.  S3 buckets should require requests to use Secure Socket Layer
+6. Amazon EC2 should be configured to use VPC endpoints
+7. EBS default encryption should be enabled

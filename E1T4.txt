@@ -1,0 +1,12 @@
+Poor security practices
+-----------------------
+Vulnerability 1:
+    Webservice instance is hosted in the public subnet. This will make the server accessible to external public. Instead we can host this in a private subnet. Access from Application loadbalancer alone can reach the web service instance
+
+Vulnerability 2:
+----------------
+    There is no firewall between the load balancer and internet gateway. The traffic from external world can't be controlled and we won't be able to control the DDOS attachs.
+
+Vulnerability 3:
+----------------
+    There is no mention of keeping the secret receipt S3 content in encryption mode at rest. The content of the Secret S3 bucket can be encrypted using customer Master Key. Only specific IAM role will have access to that key. By this way even if some one get hold of the the receipe will not be able to use it as well.
