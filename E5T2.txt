@@ -5,21 +5,26 @@ Identify tools that will allow you to do the following:
 For each tool - identify an example compliance violation or vulnerability which it might expose.
 
 Answer:
-    a. Scan infrastructure as code templates. 
+    a. Scan infrastructure as code templates any of the below tools can be used and example vulnerability fixed also given below
         1. Checkov - To detect cloud misconfigurations
         2. TFLint - Focused on checking possible errors and provides the best security practice.
         3. Terrafirma - For static code analysis used for Terraform plans. It is designed to detect security misconfigurations
         4. Accurics - great chance of protecting your cloud infrastructure from misconfigurations, potential data breaches, and policy violations. 
         5. CloudSploit - capability to scan more than 95 security vulnerabilities across 40+ resource types consisting of a wide range of AWS products.
-    b. Scan AMI’s or containers for OS vulnerabilities. 
+    b. Scan AMI’s or containers for OS vulnerabilities  any of the below tools can be used and example vulnerability fixed also given below
         1. Clair - Offers static security and vulnerability scanning for docker and application (appc) containers.
         2. Anchore - open-source project for deep analysis of docker images.
         3. Dagda - open-source tool for static analysis of known vulnerabilities such as trojans, malware, viruses, etc. in docker images and containers. I
         4. Falco - open-source project and a threat detection engine for Kubernetes. 
         5. Aqua security - protect applications that are built using cloud-native technologies like containers. It provides vulnerability scanning and management for 
-    c. Scan an AWS environment for cloud configuration vulnerabilities.
+    c. Scan an AWS environment for cloud configuration vulnerabilities  any of the below tools can be used and example vulnerability fixed also given below
         1. AWS config - effective tool for assessing, evaluating, recording, auditing configurations of the resources in your AWS environment. It simplifies security 2. analysis, compliance auditing, operational troubleshooting, and change management.
         3.Cloud Custodian - flexible open-source rules engine for managing the AWS cloud resources and accounts to ensure security and policy compliance. This allows you to manage and optimize security, costs, and governance of your AWS cloud environment.
         4. Prowler - AWS account’s security configuration assessment, auditing, and hardening tool that also checks compliance with the CIS AWS Foundations security standards. Further, the tool performs over 100 additional checks, including HIPAA, GRDR, forensics readiness, trust boundaries, and more.
         5. Cloudmapper - open-source tool that enables you to analyze and build an interactive visualization of assets, services, and other components in your AWS environment.
         6. Cloud Reports - node.js based open source tool for collecting and analyzing a wide range of information from various cloud components. The tool compares the findings against the best practices.
+    d. code build   
+        AWS CodeBuild is a fully managed continuous integration service that compiles source code, runs tests, and produces software packages that are ready to deploy.
+    e. Code pipeline
+        AWS CodePipeline is a fully managed continuous delivery service that helps you automate your release pipelines for fast and reliable application and infrastructure updates. CodePipeline automates the build, test, and deploy phases of your release process every time there is a code change, based on the release model you define.
+    f. Lamda function will be used to trigger the static code analyzer. The static code analyser will be Terrafirma
